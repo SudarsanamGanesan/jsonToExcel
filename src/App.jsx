@@ -8,10 +8,10 @@ function App() {
   const handleDownload = async () => {
     try {
       const token = process.env.REACT_APP_API_TOKEN;
-      // console.log(token)
+      //console.log(token)
 
       const response = await axios.get(
-        `http://localhost:5005/api/v1/store/${id}`,
+        `${process.env.REACT_APP_API}/store/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
