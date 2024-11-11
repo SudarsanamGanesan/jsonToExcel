@@ -4,17 +4,20 @@ import * as XLSX from 'xlsx';
 
 function App() {
   const [id, setId] = useState('');
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiKey = import.meta.env.VITE_API_KEY;
   
   const handleDownload = async () => {
     try {
-      const token = process.env.REACT_APP_API_TOKEN;
-      //console.log(token)
+      // import.meta.env.VITE_API_MAIN_SERVER_URL
+      
+    
 
       const response = await axios.get(
-        `${process.env.REACT_APP_API}/store/${id}`,
+        `${apiUrl}/store/${id}`,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${apiKey}`,
             "Content-Type": "application/json",
           },
         }
