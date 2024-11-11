@@ -57,10 +57,11 @@ function App() {
 
   return (
     <>
+    <h3>Enter store Id</h3>
       <input
         onChange={(e) => setId(e.target.value)}
         type="text"
-        placeholder="Enter the store uuid"
+        placeholder="eec59400-1fb4-4b2c-a19b-959f05570f8f"
       />
       <button onClick={handleDownload}>Click to Download</button>
     </>
